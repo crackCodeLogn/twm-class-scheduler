@@ -14,6 +14,7 @@ public class GenerateScheduleCells {
         ClassScheduler.ClassCells.Builder builder = ClassScheduler.ClassCells.newBuilder();
         classes.getClassesList().forEach(scheduledClass -> Arrays.stream(scheduledClass.getDays().split(","))
                 .forEach(day -> builder.addClassCells(generateScheduledClassCell(scheduledClass, day))));
+        builder.setClasses(classes);
         return builder.build();
     }
 
