@@ -25,6 +25,7 @@ public class GenerateScheduleCells {
                 .setStartTime(scheduledClass.getStartTime())
                 .setEndTime(scheduledClass.getEndTime())
                 .setLocation(scheduledClass.getLocation())
+                .setProf(scheduledClass.getProf())
                 .build();
     }
 }
